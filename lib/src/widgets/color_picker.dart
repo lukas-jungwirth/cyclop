@@ -118,45 +118,31 @@ class ColorPickerState extends State<ColorPicker> {
               boxShadow: largeDarkShadowBox,
             ),
             child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  MainTitle(onClose: widget.onClose),
-                  Flexible(
-                    fit: FlexFit.loose,
-                    child: Tabs(
-                      labels: const [
-                        'Sliders',
-                      ],
-                      views: [
-                        ChannelSliders(
-                          selectedColor: selectedColor,
-                          onChange: onColorChanged,
-                        ),
-                      ],
-                    ),
-                  ),
-                  if (widget.config.enableOpacity)
-                    RepaintBoundary(
-                      child: OpacitySlider(
+              child: Container(
+                color: Colors.green,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      fit: FlexFit.loose,
+                      child: ChannelSliders(
                         selectedColor: selectedColor,
-                        opacity: selectedColor.opacity,
-                        onChange: _onOpacityChange,
+                        onChange: onColorChanged,
                       ),
                     ),
-                  defaultDivider,
-                  ColorSelector(
-                    color: selectedColor,
-                    withAlpha: widget.config.enableOpacity,
-                    thumbWidth: 96,
-                    onColorChanged: widget.onColorSelected,
-                    onEyePick: widget.config.enableEyePicker
-                        ? widget.onEyeDropper
-                        : null,
-                    focus: hexFieldFocus,
-                  ),
-                ],
+                    ColorSelector(
+                      color: selectedColor,
+                      withAlpha: widget.config.enableOpacity,
+                      thumbWidth: 96,
+                      onColorChanged: widget.onColorSelected,
+                      onEyePick: widget.config.enableEyePicker
+                          ? widget.onEyeDropper
+                          : null,
+                      focus: hexFieldFocus,
+                    ),
+                  ],
+                ),
               ),
             ),
           );

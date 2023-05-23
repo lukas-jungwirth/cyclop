@@ -34,7 +34,7 @@ class ColorSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(4),
-      child: Row(
+      child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -59,8 +59,8 @@ class ColorSelector extends StatelessWidget {
         elevation: 3,
         borderRadius: defaultBorderRadius,
         child: Container(
-          width: thumbWidth,
-          height: 36,
+          height: 52,
+          width: 52,
           decoration: BoxDecoration(
             color: color,
             borderRadius: defaultBorderRadius,
