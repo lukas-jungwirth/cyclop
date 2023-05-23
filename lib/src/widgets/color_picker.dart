@@ -124,6 +124,7 @@ class ColorPickerState extends State<ColorPicker> {
                       onChange: onColorChanged,
                     ),
                   ),
+                  const SizedBox(height: 25.0),
                   ColorSelector(
                     color: selectedColor,
                     withAlpha: widget.config.enableOpacity,

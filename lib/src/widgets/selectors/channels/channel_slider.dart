@@ -8,7 +8,7 @@ import 'hsl_selector.dart';
 ThemeData _sliderTheme(Color color, List<Color> colors) =>
     ThemeData.light().copyWith(
       sliderTheme: SliderThemeData(
-        trackHeight: 52,
+        trackHeight: 32,
         thumbColor: Colors.white,
         trackShape: ChannelSliderTrack(color, colors),
       ),
