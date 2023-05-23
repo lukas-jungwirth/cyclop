@@ -126,27 +126,14 @@ class ColorPickerState extends State<ColorPicker> {
                   Flexible(
                     fit: FlexFit.loose,
                     child: Tabs(
-                      labels: [
-                        'Material',
+                      labels: const [
                         'Sliders',
-                        if (widget.config.enableLibrary) 'Library'
                       ],
                       views: [
-                        GridColorSelector(
-                          selectedColor: selectedColor,
-                          onColorSelected: onColorChanged,
-                        ),
                         ChannelSliders(
                           selectedColor: selectedColor,
                           onChange: onColorChanged,
                         ),
-                        if (widget.config.enableLibrary)
-                          SwatchLibrary(
-                            colors: widget.swatches,
-                            currentColor: selectedColor,
-                            onSwatchesUpdate: widget.onSwatchesUpdate,
-                            onColorSelected: onColorChanged,
-                          ),
                       ],
                     ),
                   ),
