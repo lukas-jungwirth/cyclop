@@ -68,20 +68,6 @@ class ChannelSlider extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 8),
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: theme.inputDecorationTheme.fillColor,
-                  borderRadius: defaultBorderRadius,
-                ),
-                width: 60,
-                child: Text(
-                  labelGetter(selectedColor),
-                  textAlign: TextAlign.center,
-                  style: textTheme.bodyLarge,
-                ),
-              )
             ],
           ),
         ],
