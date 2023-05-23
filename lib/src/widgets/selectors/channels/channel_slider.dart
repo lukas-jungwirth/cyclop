@@ -8,7 +8,7 @@ import 'hsl_selector.dart';
 ThemeData _sliderTheme(Color color, List<Color> colors) =>
     ThemeData.light().copyWith(
       sliderTheme: SliderThemeData(
-        trackHeight: 24,
+        trackHeight: 32,
         thumbColor: Colors.white,
         trackShape: ChannelSliderTrack(color, colors),
       ),
@@ -47,7 +47,7 @@ class ChannelSlider extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
