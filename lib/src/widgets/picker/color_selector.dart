@@ -59,8 +59,8 @@ class ColorSelector extends StatelessWidget {
         elevation: 3,
         borderRadius: defaultBorderRadius,
         child: Container(
-          height: 52,
-          width: 52,
+          height: thumbWidth,
+          width: thumbWidth,
           decoration: BoxDecoration(
             color: color,
             borderRadius: defaultBorderRadius,

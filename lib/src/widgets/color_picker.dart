@@ -112,37 +112,29 @@ class ColorPickerState extends State<ColorPicker> {
           final theme = Theme.of(context);
           return Container(
             constraints: BoxConstraints.loose(pickerSize),
-            decoration: BoxDecoration(
-              color: theme.scaffoldBackgroundColor,
-              borderRadius: BorderRadius.circular(defaultRadius),
-              boxShadow: largeDarkShadowBox,
-            ),
             child: SingleChildScrollView(
-              child: Container(
-                color: Colors.green,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Flexible(
-                      fit: FlexFit.loose,
-                      child: ChannelSliders(
-                        selectedColor: selectedColor,
-                        onChange: onColorChanged,
-                      ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(
+                    fit: FlexFit.loose,
+                    child: ChannelSliders(
+                      selectedColor: selectedColor,
+                      onChange: onColorChanged,
                     ),
-                    ColorSelector(
-                      color: selectedColor,
-                      withAlpha: widget.config.enableOpacity,
-                      thumbWidth: 96,
-                      onColorChanged: widget.onColorSelected,
-                      onEyePick: widget.config.enableEyePicker
-                          ? widget.onEyeDropper
-                          : null,
-                      focus: hexFieldFocus,
-                    ),
-                  ],
-                ),
+                  ),
+                  ColorSelector(
+                    color: selectedColor,
+                    withAlpha: widget.config.enableOpacity,
+                    thumbWidth: 96,
+                    onColorChanged: widget.onColorSelected,
+                    onEyePick: widget.config.enableEyePicker
+                        ? widget.onEyeDropper
+                        : null,
+                    focus: hexFieldFocus,
+                  ),
+                ],
               ),
             ),
           );
