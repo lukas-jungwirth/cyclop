@@ -28,10 +28,6 @@ class ChannelSlidersState extends State<ChannelSliders> {
   Color get color => widget.selectedColor;
 
   @override
-  Widget build(BuildContext context) => Tabs(
-        labels: const ['HSL'],
-        views: [
-          HSLSliders(color: color, onColorChanged: widget.onChange),
-        ],
-      );
+  Widget build(BuildContext context) =>
+      HSLSliders(color: color, onColorChanged: widget.onChange);
 }
